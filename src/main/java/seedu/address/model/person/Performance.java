@@ -51,6 +51,10 @@ public class Performance {
         return validInteger;
     }
 
+    protected int getValue() {
+        return Integer.parseInt(this.value);
+    }
+
     @Override
     public String toString() {
         return String.valueOf(value);

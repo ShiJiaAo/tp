@@ -71,6 +71,10 @@ public class Person {
         return performance;
     }
 
+    public int getPerformanceValue() {
+        return this.getPerformance().getValue();
+    }
+
     /**
      * Returns an immutable tag set, which throws {@code UnsupportedOperationException}
      * if modification is attempted.

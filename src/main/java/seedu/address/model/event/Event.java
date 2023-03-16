@@ -143,6 +143,22 @@ public abstract class Event {
         return students.size();
     }
 
+    /**
+     * Flags students whose performance indicators are below a certain threshold.
+     *
+     * @param threshold The integer performance threshold.
+     * @return The list of students whose performance indicators are below the threshold.
+     */
+    public List<Person> flagLowPerformers(int threshold) {
+        List<Person> lowPerformers = new ArrayList<>();
+        for (Person i : this.students) {
+            if (i.getPerformanceValue() < threshold) {
+                lowPerformers.add(i);
+            }
+        }
+        return lowPerformers;
+    }
+
     /* *************************************************************************
      *                                                                         *
      * Methods to manipulate date in an event                                  *
